@@ -1,0 +1,118 @@
+<!-- Assignment 8 COMP 1850 by Dennis Wong A00062678-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mini Gallery</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/a8_style.css">
+
+    <style>
+        main {
+            padding-bottom: 30px;
+        }
+
+        .fade-in-image {
+            float: left;
+            opacity: 50%;
+            transition: opacity 1s;
+            margin: 20px;
+        }
+
+        .fade-in-image:hover {
+            opacity: 100%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #2B3A55;
+            box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        h2 {
+            clear: both;
+        }
+
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+</head>
+
+
+<body onload="document.getElementById('foot').innerHTML ='The web address for this page is: ' + window.location.href">
+    <div id="wrapper">
+        <header>
+            <h1>Random Studio</h1>
+            <!--Horizontal navigation created using w3schools sandbox-->
+            <nav class="topnav">
+                <a href="page1.html">Welcome</a>
+                <a class="active" href="#page2">Mini Gallery</a>
+                <a href="page3.html">About Us</a>
+                <a href="page4.html">References</a>
+            </nav>
+
+            <!--Regular horizontal navigation for screen sizes >600px-->
+            <ul class="wide_menu">
+                <li><a href="page1.html">Welcome</a></li>
+                <li><a class="active" href="#page2">Mini Gallery</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a href="page4.html">References</a></li>
+            </ul>
+
+        </header>
+
+        <main>
+            <h1>Mini Gallery</h1>
+            <h2>CSS Transition</h2>
+            <p>Here are some examples of the random images you can find at Random Studio. Please use the About Us page
+                to contact us to purchase any images.</p>
+            <h3>Stone Bench</h3>
+
+            <div>
+                <p><img class="fade-in-image" src="images/bench400x300.jpg" width="400" height="300"
+                        alt="Stone Bench">Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Donec ac arcu in justo ultricies molestie sit
+                    amet
+                    vitae libero. Nunc vel lorem in odio finibus efficitur. Aenean imperdiet risus at magna egestas,
+                    quis
+                    facilisis sapien euismod. Donec non iaculis odio. Ut hendrerit massa in fringilla sodales. Maecenas
+                    vel
+                    blandit odio, et convallis arcu. Donec dapibus venenatis nibh, in ullamcorper velit maximus quis.
+                    Quisque
+                    consequat dapibus dui eget auctor. Pellentesque aliquet id ligula fermentum porttitor. Vestibulum
+                    ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut commodo mi nec lectus consequat
+                    ultrices.
+                </p>
+                <p class="clearFloat">Image Source: <a href="https://randomwordgenerator.com/picture.php"
+                        target="_blank">https://randomwordgenerator.com/picture.php</a>
+                </p>
+            </div>
+
+            <h3>Private Rock Cove</h3>
+            <div>
+                <p>
+                    <img class="fade-in-image" src="images/rocks400x267.jpg" width="400" height="267"
+                        alt="Private rock cove">Donec quam nibh, porta quis dictum vitae, eleifend quis felis. Curabitur
+                    id gravida ipsum. Nunc ut varius
+                    quam. Nulla commodo eleifend eros, ut pretium odio mollis vitae. Vivamus placerat maximus turpis
+                    vitae
+                    ullamcorper. Phasellus consectetur sem non magna facilisis, id fringilla urna ultricies. Mauris non
+                    vehicula
+                    ante. Fusce commodo eros sit amet lacus tristique lobortis. Praesent magna arcu, fermentum eu sapien
+                    id,
+                    porta imperdiet ipsum. Etiam ut euismod nibh. Maecenas quis laoreet magna. Aenean lacinia id tellus
+                    ut
+                    consectetur.</p>
+                <p class="clearFloat">Image Source: <a href="https://randomwordgenerator.com/picture.php"
+                        target="_blank">https://randomwordgenerator.com/picture.php</a></p>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Copyright 2022 Dennis Wong</p>
+            <p id="foot"></p>
+        </footer>
+    </div>
+</body>

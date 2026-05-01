@@ -1,0 +1,142 @@
+<!-- Assignment 8 COMP 1850 by Dennis Wong A00062678-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/a8_style.css">
+
+    <style>
+        .accordion {
+            background-color: #CE7777;
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .activeAccord,
+        .accordion:hover {
+            background-color: #d38a8a;
+        }
+
+        .accordion:after {
+            content: '\25BC';
+            color: #fff;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .activeAccord:after {
+            content: "\25B2";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: #F2E5E5;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        /* readjust padding for accordian */
+        .fixPadding {
+            margin: -20px;
+        }
+
+        h2 {
+            padding-bottom: 10px;
+        }
+
+        footer {
+            padding-top: 10px;
+        }
+    </style>
+
+</head>
+
+
+<body onload="document.getElementById('foot').innerHTML ='The web address for this page is: ' + window.location.href">
+    <div id="wrapper">
+        <header>
+            <h1>Random Studio</h1>
+
+            <!--Horizontal navigation created using w3schools sandbox-->
+            <nav class="topnav">
+                <a href="page1.html">Welcome</a>
+                <a href="page2.html">Mini Gallery</a>
+                <a class="active" href="#page3">About Us</a>
+                <a href="page4.html">References</a>
+            </nav>
+
+            <!--Regular horizontal navigation for screen sizes >600px-->
+            <ul class="wide_menu">
+                <li><a href="page1.html">Welcome</a></li>
+                <li><a href="page2.html">Mini Gallery</a></li>
+                <li><a class="active" href="#page3">About Us</a></li>
+                <li><a href="page4.html">References</a></li>
+            </ul>
+
+        </header>
+
+
+
+        <main>
+            <h1>About Us</h1>
+            <h2>CSS Accordian</h2>
+            <p>Random Studio is a small company located in a random city. We are open for suggestions or comments. Please use your
+                preferred contact method to get in touch with us</p>
+
+            <h2>Contact Us</h2>
+            <div class="fixPadding">
+                <button class="accordion">By Phone</button>
+                <div class="panel">
+                    <p>Phone: 555-555-5555</p>
+                    <p>Toll Free: 1-800-555-555-5555</p>
+                </div>
+
+                <button class="accordion">By Email</button>
+                <div class="panel">
+                    <p>General Inquiries: general@randomstudio.ca</p>
+                    <p>Purchasing Inquiries: purchase@randomstudio.ca</p>
+                    <p>Technical Support: tech@randomstudio.ca</p>
+                </div>
+
+                <button class="accordion">By Mail</button>
+                <div class="panel">
+                    <p>Address: 123 Sesame Street, Random City, BC</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright 2022 Dennis Wong</p>
+            <p id="foot"></p>
+        </footer>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("activeAccord");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>

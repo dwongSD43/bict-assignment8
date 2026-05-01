@@ -1,0 +1,124 @@
+<!-- Assignment 8 COMP 1850 by Dennis Wong A00062678-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>References</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/a8_style.css">
+
+
+
+</head>
+
+<body onload="document.getElementById('foot').innerHTML ='The web address for this page is: ' + window.location.href">
+    <div id="wrapper">
+        <header>
+            <h1>Random Studio</h1>
+
+            <!--Horizontal navigation created using w3schools sandbox-->
+            <nav class="topnav">
+                <a href="page1.html">Page 1</a>
+                <a href="page2.html">Mini Gallery</a>
+                <a href="page3.html">About Us</a>
+                <a class="active" href="#page4">References</a>
+            </nav>
+
+            <!--Regular horizontal navigation for screen sizes >600px-->
+            <ul class="wide_menu">
+                <li><a href="page1.html">Welcome</a></li>
+                <li><a href="page2.html">Mini Gallery</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a class="active" href="#page4">References</a></li>
+            </ul>
+
+        </header>
+
+
+
+        <main>
+            <h1>References</h1>
+            <h2>Required:</h2>
+
+            <h3>Event Handler Behaviour</h3>
+            <p>An onload event handler was used on each page to insert the web address of the page in the footer. I was
+                not sure if I needed a separate event handler from the DOM method and the function example but I wanted
+                to make sure I had everything covered and it was good practice.</p>
+
+            <h3>JavaScript DOM</h3>
+            <p>A built in JavaScript DOM method was used to change the font size on the Welcome page (page 1)</p>
+
+            <h3>Programmer Defined Function</h3>
+            <p>The Welcome page has a defined function on the change background colour and change font colour buttons.
+            </p>
+            <h3>Accordion</h3>
+            <p>On the About Us page (page 3), the accordion was used to hide and reveal how to contact us. The options
+                are by email, telephone or mail.</p>
+            <h3>CSS Transition</h3>
+            <p>CSS Transition was demonstrated on the Mini Gallery (page 2). A transition was used on the 2 images. The
+                pictures fades in when you mouse over the image and fades to 50% when you mouse out.</p>
+
+            <h2>Cite:</h2>
+
+            <h3>Event Handler Behaviour</h3>
+            <p>The event handler behaviour I chose to use was onload event. I inseted the url of the page in the footer
+                of the page everytime the the page loads. The two resources I used was <a
+                    href="https://www.w3schools.com/jsref/event_onload.asp" target="_blank">w3 Schools onLoad Event</a>
+                and <a href=" https://www.w3docs.com/snippets/javascript/how-to-get-current-url-in-javascript.html"
+                    target="_blank">w3Docs How to Get Current URL in JavaScript</a>. I also have onclick behaviour in
+                the Javascript DOM examples and Function examples.</p>
+
+            <h3>DOM</h3>
+            <p>I learned how to change the font size with DOM at <a
+                    href="https://www.w3schools.com/jS/js_htmldom_css.asp">w3Schools JavaScript HTML DOM - Changing
+                    CSS</a></p>
+
+
+            <h3>Functions</h3>
+            <p>I learned how to create a custom function from these 2 sandboxes on w3schools <a
+                    href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_equal" target="_blank">Sandbox
+                    1</a>
+                and <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_function1" target="_blank">Sandbox
+                    2</a>. I also used <a
+                    href="https://stackoverflow.com/questions/21397743/passing-html-input-value-as-a-javascript-function-parameter"
+                    target="_blank"> stackoverflow</a> to find how to pass values to functions from input fields.</p>
+
+            <h3>Accordian code</h3>
+            <p>I use this site <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" target="_blank">w3
+                    schools How To - Collapsibles/Accordion</a> to help create the accordion. I changed
+                (+) and (-) symbols to arrow heads using this source, <a
+                    href="https://stackoverflow.com/questions/2701192/what-characters-can-be-used-for-up-down-triangle-arrow-without-stem-for-displa"
+                    target="_blank">How to add an arrow head symbol</a>.</p>
+
+            <h3>CSS Transition</h3>
+            <p>I used 2 sources to create the CSS transition, <a
+                    href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">w3School CSS
+                    Transitions</a> and <a
+                    href="https://blog.hubspot.com/website/css-fade-in#:~:text=CSS%20Fade%2Din%20Transition%20on%20Hover&text=This%20can%20be%20applied%20to,a%20user%20hovers%20over%20it."
+                    target="_blank">How to Add a CSS Fade-in Transition Animation to Text, Images, Scroll & Hover</a>. I
+                added a frame and box shadow to the image when you hover over it. I found how to do the box shadow at <a
+                    href="https://www.w3schools.com/css/css3_shadows_box.asp" target="_blank"> Box Shadow for
+                    Images</a>.</p>
+
+
+            <h3>Colour Palette</h3>
+            <p>I selected my colour palette by using <a href="https://colorhunt.co/palette/65647c8b7e74c7bca1f1d3b3"
+                    target="_blank">colorhunt.co</a></p>
+
+
+            <h3>Google Fonts</h3>
+            <p>The custom fonts I used on this site for the headings can be found at <a
+                    href="https://fonts.google.com/specimen/Lato?category=Sans+Serif" target="_blank">Google Fonts -
+                    Lato Font</a></p>
+
+        </main>
+
+        <footer>
+            <p>Copyright 2022 Dennis Wong</p>
+            <p id="foot"></p>
+        </footer>
+    </div>
+
+
+</body>

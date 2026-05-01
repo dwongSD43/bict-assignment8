@@ -1,0 +1,142 @@
+<!-- Assignment 8 COMP 1850 by Dennis Wong A00062678-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/a8_style.css">
+
+    <style>
+        img {
+            float: left;
+            margin: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #2B3A55;
+            box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        button {
+            margin: 5px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        .bigButton {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+
+<body onload="document.getElementById('foot').innerHTML ='The web address for this page is: ' + window.location.href">
+    <div id="wrapper">
+        <header>
+            <h1>Random Studio</h1>
+
+            <!--Horizontal navigation created using w3schools sandbox-->
+            <nav class="topnav">
+                <a class="active" href="#page1">Welcome</a>
+                <a href="page2.html">Mini Gallery</a>
+                <a href="page3.html">About Us</a>
+                <a href="page4.html">References</a>
+            </nav>
+
+            <!--Regular horizontal navigation for screen sizes >600px-->
+            <ul class="wide_menu">
+                <li><a class="active" href="#page1">Welcome</a></li>
+                <li><a href="page2.html">Mini Gallery</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a href="page4.html">References</a></li>
+            </ul>
+
+
+        </header>
+
+
+
+        <main>
+            <h1>Welcome</h1>
+            <h2>Event Handler, JavaScript DOM, and Function</h2>
+            <div id="pTags">
+                <p>Welcome to
+                    the Random Studio. The latest in random images can be viewed and purchased here. Contact us
+                    to purchase any of the random images you see on our site. </p>
+                <p><img src="images/batman_egg400x299.jpg" width="400" height="299" alt="Lego Batman and Egg">Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Donec ac arcu in justo ultricies molestie sit
+                    amet
+                    vitae libero. Nunc vel lorem in odio finibus efficitur. Aenean imperdiet risus at magna egestas,
+                    quis
+                    facilisis sapien euismod. Donec non iaculis odio. Ut hendrerit massa in fringilla sodales. Maecenas
+                    vel
+                    blandit odio, et convallis arcu. Donec dapibus venenatis nibh, in ullamcorper velit maximus quis.
+                    Quisque
+                    consequat dapibus dui eget auctor. Pellentesque aliquet id ligula fermentum porttitor. Vestibulum
+                    ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut commodo mi nec lectus consequat
+                    ultrices.</p>
+
+                <p>Donec quam nibh, porta quis dictum vitae, eleifend quis felis. Curabitur id gravida ipsum. Nunc ut
+                    varius
+                    quam. Nulla commodo eleifend eros, ut pretium odio mollis vitae. Vivamus placerat maximus turpis
+                    vitae
+                    ullamcorper. Phasellus consectetur sem non magna facilisis, id fringilla urna ultricies. Mauris non
+                    vehicula
+                    ante. Fusce commodo eros sit amet lacus tristique lobortis. Praesent magna arcu, fermentum eu sapien
+                    id,
+                    porta imperdiet ipsum. Etiam ut euismod nibh. Maecenas quis laoreet magna. Aenean lacinia id tellus
+                    ut
+                    consectetur.</p>
+
+                <p>Nullam ornare magna nec nulla rutrum, vel tincidunt ligula scelerisque. Nulla nec massa blandit,
+                    semper erat
+                    fermentum, pharetra libero. Suspendisse quis nunc sit amet purus rhoncus sodales eget quis orci.
+                    Pellentesque eget leo elit. Fusce euismod enim non nibh laoreet varius ac tempor dui. Maecenas
+                    suscipit
+                    augue quis nibh volutpat, sit amet pulvinar mi interdum. In hac habitasse platea dictumst.</p>
+            </div>
+            <h2>Customize Readability</h2>
+            <div>
+                <label>Change Text Size:</label>
+                <button type= "button" onclick="document.getElementById('pTags').style.fontSize = '1em'">Text 1x</button>
+                <button type= "button" onclick="document.getElementById('pTags').style.fontSize = '1.5em'">Text 1.5x</button>
+                <button onclick="document.getElementById('pTags').style.fontSize = '2em'">Text 2x</button>
+            </div>
+            <div>
+                <label for="colour_field">Enter a new background colour:</label>
+                <input type="text" id="colour_field" name="background_colour">
+                <button class="bigButton" onclick="myFunctionBG(getElementById('colour_field').value)">Change Background
+                    Colour</button>
+                <button class="bigButton"
+                    onclick="document.getElementById('pTags').style.backgroundColor = '#F2E5E5'">Reset
+                    Background</button>
+            </div>
+            <div>
+                <label for="colourFont_field">Enter a new text colour:</label>
+                <input type="text" id="colourFont_field" name="font_colour">
+                <button class="bigButton" onclick="myFunctionFont(getElementById('colourFont_field').value)">Change Text
+                    Colour</button>
+                <button class="bigButton" onclick="document.getElementById('pTags').style.color = '#000'">Reset
+                    Text Colour</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright 2022 Dennis Wong</p>
+            <p id="foot"></p>
+        </footer>
+    </div>
+
+    <script>
+        function myFunctionBG(colour) {
+            document.getElementById("pTags").style.backgroundColor = colour;
+        }
+
+        function myFunctionFont(colourFont) {
+            document.getElementById("pTags").style.color = colourFont;
+        }
+    </script>
+</body>
